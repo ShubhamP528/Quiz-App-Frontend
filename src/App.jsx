@@ -9,6 +9,7 @@ import Leaderboard from './Component/Leaderboard';
 import AddQuestion from './Component/AddQuestion';
 import CreateQuiz from './Component/CreateQuiz';
 import UpdateQuestion from './Component/UpdateQuestion';
+import DefaultQuestions from './Component/DefaultQuestions';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/addQuestion' element={<AddQuestion/>}></Route>
         <Route path='/createQuize' element={<CreateQuiz/>}></Route>
         <Route path='/updateQuestionList/:title' element={<UpdateQuestion/>}/>
+        <Route path='/defaultQuestionList' element={<DefaultQuestions/>}/>
       </Routes>      
     </div>
   );

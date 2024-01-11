@@ -3,10 +3,13 @@ import React, {useEffect, useState } from 'react'
 import { useAuthContext } from '../GlobleContext/AuthContext'
 import NavBar from './NavBar'
 import { useQuestionhook } from '../hooks/useQuestion'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import toast from 'react-hot-toast'
+import { Navigate } from 'react-router-dom'
 
 function UpdateQuestion() {
 
+    const navigate=useNavigate()
     const paramsObj=useParams()
     const subject=paramsObj.title
     const {user}=useAuthContext()
@@ -17,6 +20,7 @@ function UpdateQuestion() {
     const [title, setTitle]=useState(subject)
     const [answers,setAnswers]=useState([])
     const [questions, setQuestions]=useState([])
+    const [loading, setLoading]=useState(null)
 
     useEffect(()=>{
         setQuestions([...list])
@@ -43,6 +47,7 @@ function UpdateQuestion() {
         setAnswers([...Arr])
         const FinalList={title ,questions,answers}
         console.log(FinalList)
+        setLoading(true)
         axios
         .patch(`/questionList/${subject}`,{FinalList},{
             headers:{
@@ -50,10 +55,14 @@ function UpdateQuestion() {
             }
         })
         .then((output)=>{
-            console.log(output.data)
+            navigate('/createQuize')
+            setLoading(false)
+            toast.success(output.data.message)
         })
-        .catch(error=>console.log(error.message))
+        .catch((error)=>{
+            console.log(error)
 
+        })
     }
 
 
@@ -96,7 +105,7 @@ function UpdateQuestion() {
                 ))
             }
 
-            <div className='m-3 border border-black w-fit'> <button type="submit">Done</button> </div>
+            <div className={`m-3 border border-black w-fit ${loading ? 'cursor-no-drop': ' cursor-pointer'}`}> <button className={`${loading ? 'cursor-no-drop': ' cursor-pointer'}`} type="submit">Done </button> </div>
 
         </form>
     </div>
