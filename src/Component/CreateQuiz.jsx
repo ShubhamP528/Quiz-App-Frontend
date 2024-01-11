@@ -57,9 +57,8 @@ function CreateQuiz() {
               return (
             
                 <div key={l._id} className='flex cols gap-6'>         
-                <Link  to={`/question/${l.title}/1`}><div className=' w-[60%]'>{l.title} </div></Link><span onClick={()=>deleteHandler(l.title)}>Delete</span> <Link to={`/updateQuestionList/${l.title}`}><span>Update</span></Link> <span>orgnize_quiz</span>
+                <Link  to={`/question/${l.title}/1`}><div className=' w-[60%]'>{l.title} </div></Link><span className=' cursor-pointer border px-2 py-1' onClick={()=>deleteHandler(l.title)}>Delete</span> <Link to={`/updateQuestionList/${l.title}`}><span>Update</span></Link> <span>orgnize_quiz</span>
                 </div>
-
               )
             })}
         </div>
