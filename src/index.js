@@ -6,13 +6,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 
 import { AppContextProvider } from './GlobleContext/AppContext';
+import { AuthContextProvider } from './GlobleContext/AuthContext';
+import { Toaster } from 'react-hot-toast';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <AppContextProvider>
-            <App />
-        </AppContextProvider>
+        <AuthContextProvider>
+            <AppContextProvider>
+                <App />
+                <Toaster />
+            </AppContextProvider>
+        </AuthContextProvider>
     </BrowserRouter>
 );
 

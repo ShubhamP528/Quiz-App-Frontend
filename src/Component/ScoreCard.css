@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.OuterPage {
+    /* background:radial-gradient(rgb(107, 52, 237),rgb(220, 99, 231));*/
+    /* background-color: rgb(1,255,255); */
+    background-image: url("https://wallpapers.com/images/hd/blue-neon-background-a5954j0t7p2io4ym.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.OuterPage h1 {
+    text-align: center;
+    padding-top: 4rem;
+    padding-left: 3.3rem;
+    color: greenyellow;
+    text-shadow: 2px 2px gray;
+}
+
+.InnerPage {
+    height: 65vh;
+    width: 60vw;
+    /* background-color: white; */
+    margin-top: 1rem;
+    margin-left: 16rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(20, 20, 20);
+    background: radial-gradient(rgb(111, 111, 234), #b97ee6, skyblue);
+}
+
+h2 {
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: lighter;
+    font-family: Happy Monkey;
+}
+
+.InnerPage h1 {
+    color: black;
+    padding-top: 0.4rem;
+    padding-left: 1rem;
+}
+
+.info {
+    background-color: #81ccf5;
+    width: 45rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 1px 1px rgb(63, 63, 63);
+    border-radius: 2px;
+}
+
+.info h5 span {
+    padding-left: 32rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.info h5 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: black;
+}
+
+.info1 {
+    background-color: #81ccf5;
+    width: 45rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+    box-shadow: 1px 1px 1px 1px rgb(63, 63, 63);
+    border-radius: 2px;
+}
+
+.info1 h5 span {
+    padding-left: 30rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.info1 h5 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: black;
+}
+
+.info2 {
+    background-color: #81ccf5;
+    width: 45rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+    box-shadow: 1px 1px 1px 1px rgb(63, 63, 63);
+    border-radius: 2px;
+}
+
+.info2 h5 span {
+    padding-left: 30.2rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.info2 h5 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: black;
+}
+
+.info3 {
+    background-color: #81ccf5;
+    width: 45rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+    box-shadow: 1px 1px 1px 1px rgb(63, 63, 63);
+    border-radius: 2px;
+}
+
+.info3 h5 span {
+    padding-left: 30.39rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.info3 h5 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: black;
+}
+
+.info4 {
+    background-color: #81ccf5;
+    width: 45rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+    box-shadow: 1px 1px 1px 1px rgb(63, 63, 63);
+    border-radius: 2px;
+}
+
+.info4 h5 span {
+    padding-left: 33.9rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.info4 h5 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: black;
+}
+
+.info5 {
+    background-color: #81ccf5;
+    width: 45rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+    box-shadow: 1px 1px 1px 1px rgb(63, 63, 63);
+    border-radius: 2px;
+}
+
+.info5 h5 span {
+    padding-left: 33.7rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.info5 h5 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: black;
+}
+
+.Button-div {
+    /* background-color: #d30e0e; */
+    width: 45rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 16.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.Button-div button {
+    background-color: white;
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 2px rgb(27, 27, 27);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+button:hover {
+    color: rgb(32, 31, 31);
+    background-color: greenyellow;
+}
+
+#LeaderBoard {
+    background-color: white;
+    border: none;
+    box-shadow: 2px 2px rgb(27, 27, 27);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+#LeaderBoard:hover {
+    color: rgb(32, 31, 31);
+    background-color: greenyellow;
+}

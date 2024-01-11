@@ -1,0 +1,102 @@
+.Back{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/premium-vector/abstract-blue-background-with-smooth-lines_230977-3914.jpg?w=826");
+}
+h1{
+    text-align: center;
+}
+.Left{
+    height: 250px;
+    width:200px;
+    border: 1px solid aliceblue;
+    margin-left: 50px;
+    margin-top: 250px;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 3px aliceblue;
+}
+.Icon{
+    margin: 20px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    margin: 50px;
+}
+.div{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.div1{
+    margin: 5px;
+}
+.div2{
+    margin: 5px;
+}
+h5{
+    text-align: center;
+}
+.container{
+position: absolute;
+border: 1px solid aliceblue;
+border-radius: 10px;
+left: 400px;
+top: 235px;
+height: 300px;
+width: 700px;
+background-color: aliceblue;
+box-shadow: 1px 2px 3px aliceblue;
+}
+.container1{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.container2{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.container3{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.container4{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.container5{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.container6{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.score{
+    position: absolute;
+    border: 1px solid aliceblue;
+border-radius: 10px;
+left: 800px;
+top: 100px;
+height: 75px;
+width: 300px;
+background-color: aliceblue;
+box-shadow: 1px 2px 3px aliceblue;
+display: flex;
+justify-content: space-around;
+}
+.number1{
+    margin: 20px;
+}
+.number2{
+    margin: 20px;
+}

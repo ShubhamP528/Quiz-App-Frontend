@@ -1,13 +1,25 @@
 import React from 'react'
 import './NavBar.css'
-
+import { useLogout } from '../hooks/useLogout';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { useAuthContext } from '../GlobleContext/AuthContext';
+// import { useAppContext } from '../GlobleContext/AppContext';
+import { useQuestionhook } from '../hooks/useQuestion';
+import toast from 'react-hot-toast';
 
 function NavBar() {
+
+  const {user} =useAuthContext()
+  // const {subject}=useQuestionhook()
+  const {logout}=useLogout()
+
+  const logoutHandler=()=>{
+    logout()
+  }
   return (
     <div>
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -20,14 +32,26 @@ function NavBar() {
                   style={{ maxHeight: '100px' }}
                   navbarScroll
                 >
-                  <Link to="/home">Home</Link>
-                  <Link to="#action2">About</Link>
-                  <Link to="#action2">Service</Link>
-                  <Link to="#action2">Contact Us</Link>
-                  <Link to="#action2">FAQ</Link>
+                  <Link className='link' to="/home">Home</Link>
+                 {
+                  user &&
+                  <>
+                    <Link className='link'   to="/addQuestion">create A quiz</Link>
+                    <Link className='link'   to="/createQuize">questionList</Link>
+                  </>
+                }
                 </Nav>
-                <Link className='login' to="/login">Login</Link>
-                 <Link to="#action3"><Button variant="outline-success">Try For Free</Button></Link> 
+                {user && (
+                  <Nav>
+                <Link className='link'>{user.username}</Link> <Link onClick={logoutHandler} className='link'>Logout</Link>
+                 </Nav>
+                )}  
+                {!user && (
+                  <Nav>
+                    <Link className='link' to="/logSig">Login/Sigin</Link>
+                 </Nav>
+                )}                 
+                <Link className='try' to="#action3"><Button variant="outline-success">Try For Free</Button></Link> 
               </Navbar.Collapse>
             </Container>
         </Navbar>

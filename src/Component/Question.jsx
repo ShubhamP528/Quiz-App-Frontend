@@ -11,19 +11,34 @@ function Question(props) {
   const navigate=useNavigate()
   const {ans, setAns}=useAppContext()
 
+  const check=(para)=>{
+    const up=ans;
+    up[props.id-1]=para;
+    setAns(up);
+  }
+
 
   const prevHandler=()=>{
     if (parseInt(props.id)!==1){
       // console.log(ans)
-      navigate(`/question/${props.id-1}`)
+      navigate(`/question/${props.title}/${props.id-1}`)
     }
   }
 
-  const nextHandler=()=>{
-    if (parseInt(props.id)!==parseInt(props.len)){
-      // console.log(ans)
-      navigate(`/question/${parseInt(props.id)+1}`) 
+  const nextHandler=async ()=>{
+    if(!ans[props.id-1]){
+      check(0)
     }
+    if (parseInt(props.id)!==parseInt(props.len)){
+      console.log(ans)
+      navigate(`/question/${props.title}/${parseInt(props.id)+1}`) 
+    } else{
+      console.log(ans)
+        navigate(`/score/${props.title}`)
+        
+    }
+    
+
 
   }
 
@@ -32,6 +47,7 @@ function Question(props) {
     up[props.id-1]=e.target.value;
     setAns(up);
     }
+
   
 
   return (
@@ -66,7 +82,7 @@ function Question(props) {
             <Button onClick={prevHandler} variant="primary">Previous</Button>
           </div>
           <div className="Next">
-            <Button onClick={nextHandler}  variant="success">{ (parseInt(props.id)===parseInt(props.len)-1) ? "Submit" : "Next"}</Button>
+            <Button onClick={nextHandler}  variant="success">{ (parseInt(props.id)===parseInt(props.len)) ? "Submit" : "Next"}</Button>
           </div>
         </div>
       </form>
