@@ -21,7 +21,7 @@ function NavBar() {
   };
   return (
     <div className="bg-green-400">
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-green-400">
         <Container fluid>
           <Navbar.Brand to="#">
             <img
@@ -37,36 +37,42 @@ function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll>
               <Link className="link" to="/home">
-                Home
+                <h6> Home</h6>
               </Link>
               {user && (
                 <>
                   <Link className="link" to="/addQuestion">
-                    create A quiz
+                    <h6>Create Quiz</h6>
                   </Link>
                   <Link className="link" to="/createQuize">
-                    questionList
+                    <h6> QuestionList</h6>
                   </Link>
                 </>
               )}
             </Nav>
             {user && (
               <Nav>
-                <Link className="link">{user.username}</Link>{" "}
+                <Link className="link">
+                  <h6>{user.username}</h6>
+                </Link>{" "}
                 <Link onClick={logoutHandler} className="link">
-                  Logout
+                  <h6>Logout</h6>
                 </Link>
               </Nav>
             )}
             {!user && (
               <Nav>
                 <Link className="link" to="/logSig">
-                  Login/Sigin
+                  <h6>Login/Sigin</h6>
                 </Link>
               </Nav>
             )}
             <Link className="try" to="#action3">
-              <Button variant="outline-success">Try For Free</Button>
+              <Button
+                className="text-black bg-white hover:bg-green-200"
+                variant="outline-success">
+                Try For Free
+              </Button>
             </Link>
           </Navbar.Collapse>
         </Container>

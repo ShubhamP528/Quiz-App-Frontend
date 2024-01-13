@@ -81,10 +81,10 @@ function AddQuestion() {
       <NavBar />
 
       <h1 className="text-center p-2 bg-red-400">Add New Question</h1>
-      <div className="flex justify-center  bg-red-200 items-center p-2 ">
+      <div className="flex justify-center  items-center p-2 ">
         <form
           onSubmit={submitHandler}
-          className=" flex flex-col h-10/12 w-11/12 border">
+          className=" flex flex-col p-2  bg-red-200 rounded shadow-md h-10/12 w-11/12 border">
           <div className="flex flex-col mx-3 mb-3">
             <label htmlFor="title">Title</label>
             <input
@@ -176,12 +176,12 @@ function AddQuestion() {
           ))}
           <div className="flex flex-row">
             <button
-              className=" border ml-80 mr-80 border-black hover:bg-green-300 "
+              className=" border ml-80 mr-80 rounded mb-4 bg-red-400 hover:bg-green-300 "
               onClick={handleAddMore}>
               Add More{" "}
             </button>
             <button
-              className="bg-green-400 hover:bg-green-300 cursor-pointer ml-80 border p-2 border-black"
+              className="bg-green-400 mb-4 hover:bg-green-300 cursor-pointer ml-80 rounded p-2 border-black"
               type="submit">
               Done
             </button>{" "}
